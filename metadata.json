@@ -1,0 +1,5 @@
+{
+  "name": "FujiRaw AI Lab",
+  "description": "A professional-grade Fujifilm RAW processor utility. Upload your .RAF files and apply .FP1 film simulations or .CUBE 3D LUTs to generate developed DNGs. Features AI-powered analysis of your color grading choices.",
+  "requestFramePermissions": []
+}

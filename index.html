@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FujiRaw AI Lab - Racing Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@400;800;900&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --fuji-green: #009639;
+        --fuji-red: #d5001c;
+        --fuji-yellow: #fcd800;
+        --fuji-black: #1a1a1a;
+        --paper-white: #f4f4f4;
+      }
+      
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--paper-white);
+        color: var(--fuji-black);
+        /* Subtle paper grain */
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+      }
+
+      .font-mono {
+        font-family: 'Share Tech Mono', monospace;
+      }
+
+      /* Hard Retro Shadows */
+      .shadow-hard {
+        box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+      }
+      .shadow-hard-sm {
+        box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+      }
+      .shadow-hard-lg {
+        box-shadow: 8px 8px 0px 0px rgba(0,0,0,0.8);
+      }
+
+      /* Racing Stripes Gradient */
+      .bg-stripes {
+        background: linear-gradient(135deg, 
+          var(--fuji-green) 0%, var(--fuji-green) 33%,
+          var(--fuji-yellow) 33%, var(--fuji-yellow) 66%,
+          var(--fuji-red) 66%, var(--fuji-red) 100%
+        );
+      }
+      
+      /* Retro Scrollbar */
+      ::-webkit-scrollbar {
+        width: 12px;
+        background: #e0e0e0;
+        border-left: 2px solid black;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--fuji-green);
+        border: 2px solid black;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--fuji-red);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
